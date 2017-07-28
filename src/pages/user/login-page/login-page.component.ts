@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 
-import { StudentService } from '../../student/student.service'
+import { ActivityService } from '../../activity/activity.service'
 
 
 @Component({
@@ -24,8 +24,8 @@ export class LoginPageComponent implements OnInit {
     this.isLogined = true;
   };
   isLogined:boolean = false;
-  constructor(meta: Meta, title: Title, private studentServ:StudentService) {
-    this.isLogined = this.studentServ.isLogined;
+  constructor(meta: Meta, title: Title, private activityServ:ActivityService) {
+    this.isLogined = this.activityServ.isLogined;
     
     title.setTitle('Login Page');
 

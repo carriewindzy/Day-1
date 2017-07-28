@@ -5,16 +5,16 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 // Child Page Components
-import { StudentListComponent } from './student-list/student-list.component';
-import { StudentItemComponent } from './student-item/student-item.component';
-import { StudentEditComponent } from './student-edit/student-edit.component';
+import { ActivityListComponent } from './activity-list/activity-list.component';
+import { ActivityItemComponent } from './activity-item/activity-item.component';
+import { ActivityEditComponent } from './activity-edit/activity-edit.component';
 
 // Import Shared Module
 import { PipesModule } from '../../pipes/pipes.module'
 import { DirectivesModule } from '../../directives/directives.module'
 
 // Providers
-import { StudentService } from './student.service'
+import { ActivityService } from './activity.service'
 
 @NgModule({
   imports: [
@@ -26,15 +26,15 @@ import { StudentService } from './student.service'
     DirectivesModule,
     // Config Router
     RouterModule.forChild([
-      { path: '', component: StudentListComponent, pathMatch: 'full' },
-      { path: 'student/edit/:sid', component: StudentEditComponent, pathMatch: 'full' }
+      { path: '', component: ActivityListComponent, pathMatch: 'full' },
+      { path: 'activity/edit/:sid', component: ActivityEditComponent, pathMatch: 'full' }
     ])
   ],
   declarations: [
-   StudentListComponent,
-   StudentItemComponent, 
-   StudentEditComponent
+   ActivityListComponent,
+   ActivityItemComponent, 
+   ActivityEditComponent
    ],
-   providers:[StudentService]
+   providers:[ActivityService]
 })
-export class StudentModule { }
+export class ActivityModule { }
