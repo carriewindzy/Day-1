@@ -19,7 +19,7 @@ export class LoginPageComponent implements OnInit {
   };
 
   login(){
-    this.user.username = "Ryane";
+    this.user.username = "Carrie";
     this.user.password = "666";
     this.isLogined = true;
   };
